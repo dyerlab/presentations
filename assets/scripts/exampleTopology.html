@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>the Dyer Laboratory of Population Genetics: Popgraph</title>
+    <style>
+        .link { stroke: #ccc; }
+        .node text { pointer-events: none; font: 10px sans-serif; }
+    </style>
+</head>
+<body>
+<script src="http://d3js.org/d3.v2.min.js"></script>
+<script> var myjson = '{ "nodes":[{"name":"1D-1","size":8,"group":"All"}, {"name":"1D-2","size":8,"group":"All"}, {"name":"1D-3","size":8,"group":"All"}, {"name":"1D-4","size":8,"group":"All"}, {"name":"2D-1","size":8,"group":"All"}, {"name":"2D-2","size":8,"group":"All"}, {"name":"2D-3","size":8,"group":"All"}, {"name":"2D-4","size":8,"group":"All"}, {"name":"2D-5","size":8,"group":"All"}, {"name":"2D-6","size":8,"group":"All"}, {"name":"2D-7","size":8,"group":"All"}, {"name":"2D-8","size":8,"group":"All"}, {"name":"2D-9","size":8,"group":"All"}], "links":[{"source":0,"target":1}, {"source":1,"target":2}, {"source":2,"target":3}, {"source":4,"target":5}, {"source":4,"target":7}, {"source":5,"target":6}, {"source":5,"target":8}, {"source":6,"target":9}, {"source":7,"target":8}, {"source":7,"target":10}, {"source":8,"target":9}, {"source":8,"target":11}, {"source":9,"target":12}, {"source":10,"target":11}, {"source":11,"target":12}]}'; var json = JSON.parse( myjson );
+
+var width = 900,
+    height = 500;
+
+var colors = d3.scale.category20();
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var force = d3.layout.force()
+    .charge(-300)
+    .linkDistance(40)
+    .size([width, height]);
+ 
+var link = svg.selectAll(".link")
+        .data(json.links)
+	    .enter().append("line")
+	      .attr("class", "link");
+
+var node = svg.selectAll(".node")
+	      .data(json.nodes)
+	    .enter().append("g")
+	      .attr("class", "node")
+	      .call(force.drag);
+
+node.append("circle")
+	        .attr("r", function(d) { return d.size; } )
+	        .attr("fill", function(d) { return colors(d.group); } );
+
+node.append("text")
+	      .attr("dx", 12)
+	      .attr("dy", ".35em")
+	      .text(function(d) { return d.name });
+
+force.on("tick", function() {
+	    link.attr("x1", function(d) { return d.source.x; })
+	        .attr("y1", function(d) { return d.source.y; })
+	        .attr("x2", function(d) { return d.target.x; })
+	        .attr("y2", function(d) { return d.target.y; });
+
+	    node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+});
+  
+force.nodes(json.nodes)
+      .links(json.links)
+      .start();
+</script>
+</body>
+</html>
