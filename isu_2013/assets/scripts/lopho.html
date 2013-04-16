@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        .link { stroke: #ccc; }
+        .node text { pointer-events: none; font: 10px sans-serif; }
+    </style>
+</head>
+<body>
+<script src="http://d3js.org/d3.v2.min.js"></script>
+<script> var data = '{ "nodes":[{"name":"BaC","size":12.15881,"color":"#FDAE61","Region":"Baja","group":"All"}, {"name":"Ctv","size":3.880886,"color":"#FDAE61","Region":"Baja","group":"All"}, {"name":"LaV","size":3.5337565,"color":"#FDAE61","Region":"Baja","group":"All"}, {"name":"Lig","size":4.731355,"color":"#FDAE61","Region":"Baja","group":"All"}, {"name":"PtC","size":4.684652,"color":"#FDAE61","Region":"Baja","group":"All"}, {"name":"PtP","size":10.925375,"color":"#FDAE61","Region":"Baja","group":"All"}, {"name":"SLG","size":5.955645,"color":"#FDAE61","Region":"Baja","group":"All"}, {"name":"SnE","size":11.82822,"color":"#FDAE61","Region":"Baja","group":"All"}, {"name":"SnF","size":6.325655,"color":"#FDAE61","Region":"Baja","group":"All"}, {"name":"SnI","size":5.466695,"color":"#FDAE61","Region":"Baja","group":"All"}, {"name":"StR","size":6.859545,"color":"#FDAE61","Region":"Baja","group":"All"}, {"name":"TsS","size":5.29057,"color":"#FDAE61","Region":"Baja","group":"All"}, {"name":"CP","size":7.870725,"color":"#B1C3D2","Region":"Sonora","group":"All"}, {"name":"LF","size":8.472215,"color":"#B1C3D2","Region":"Sonora","group":"All"}, {"name":"PL","size":6.692795,"color":"#B1C3D2","Region":"Sonora","group":"All"}, {"name":"SenBas","size":9.116705,"color":"#B1C3D2","Region":"Sonora","group":"All"}, {"name":"Seri","size":2.5,"color":"#B1C3D2","Region":"Sonora","group":"All"}, {"name":"SG","size":11.02753,"color":"#B1C3D2","Region":"Sonora","group":"All"}, {"name":"SI","size":11.52145,"color":"#B1C3D2","Region":"Sonora","group":"All"}, {"name":"SN","size":8.325785,"color":"#B1C3D2","Region":"Sonora","group":"All"}, {"name":"TS","size":16.001165,"color":"#B1C3D2","Region":"Sonora","group":"All"}], "links":[{"source":0,"target":2}, {"source":0,"target":3}, {"source":0,"target":4}, {"source":0,"target":5}, {"source":0,"target":7}, {"source":0,"target":9}, {"source":0,"target":10}, {"source":1,"target":5}, {"source":1,"target":6}, {"source":1,"target":8}, {"source":1,"target":15}, {"source":2,"target":3}, {"source":2,"target":4}, {"source":2,"target":7}, {"source":2,"target":8}, {"source":2,"target":11}, {"source":3,"target":4}, {"source":3,"target":9}, {"source":3,"target":10}, {"source":3,"target":11}, {"source":4,"target":7}, {"source":4,"target":10}, {"source":4,"target":11}, {"source":4,"target":15}, {"source":5,"target":8}, {"source":5,"target":9}, {"source":5,"target":15}, {"source":6,"target":8}, {"source":6,"target":9}, {"source":7,"target":10}, {"source":7,"target":11}, {"source":8,"target":9}, {"source":9,"target":10}, {"source":10,"target":11}, {"source":10,"target":15}, {"source":12,"target":16}, {"source":12,"target":17}, {"source":12,"target":19}, {"source":12,"target":20}, {"source":13,"target":14}, {"source":13,"target":17}, {"source":13,"target":18}, {"source":14,"target":15}, {"source":14,"target":17}, {"source":14,"target":18}, {"source":14,"target":19}, {"source":16,"target":17}, {"source":16,"target":19}, {"source":17,"target":18}, {"source":18,"target":19}, {"source":18,"target":20}, {"source":19,"target":20}]}'; 
+var json = JSON.parse( data );
+
+var width = 900,
+    height = 500;
+
+var colors = d3.scale.category20();
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var force = d3.layout.force()
+    .charge(-300)
+    .linkDistance(40)
+    .size([width, height]);
+ 
+var link = svg.selectAll(".link")
+        .data(json.links)
+	    .enter().append("line")
+	      .attr("class", "link");
+
+var node = svg.selectAll(".node")
+	      .data(json.nodes)
+	    .enter().append("g")
+	      .attr("class", "node")
+	      .call(force.drag);
+
+node.append("circle")
+	        .attr("r", function(d) { return d.size; } )
+	        .attr("fill", function(d) { return colors(d.group); } );
+
+node.append("text")
+	      .attr("dx", 12)
+	      .attr("dy", ".35em")
+	      .text(function(d) { return d.name });
+
+force.on("tick", function() {
+	    link.attr("x1", function(d) { return d.source.x; })
+	        .attr("y1", function(d) { return d.source.y; })
+	        .attr("x2", function(d) { return d.target.x; })
+	        .attr("y2", function(d) { return d.target.y; });
+
+	    node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+});
+  
+force.nodes(json.nodes)
+      .links(json.links)
+      .start();
+</script>
+</body>
+</html>

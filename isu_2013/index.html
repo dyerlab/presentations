@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Shape of Neutral &amp; Adaptive Genetic Variance</title>
+  <meta charset="utf-8">
+  <meta name="description" content="The Shape of Neutral &amp; Adaptive Genetic Variance">
+  <meta name="author" content="Rodney J. Dyer">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel="stylesheet" href = "assets/css/dyerlab.css">
+<link rel="stylesheet" href = "assets/css/ribbons.css">
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery-1.7.min.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+      <slide class="nobackground">
+    <article class="flexbox vcenter">
+      <span>
+        <img width='400px' src="assets/img/joke.png">
+      </span>
+    </article>
+  </slide>
+    <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/Dyerlab.small.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>The Shape of Neutral &amp; Adaptive Genetic Variance</h1>
+    <h2>Testing &quot;How&quot; instead of &quot;If&quot;</h2>
+    <p>Rodney J. Dyer<br/>Department of Biology, Virginia Commonwealth University</p>
+  </hgroup>
+    <a href="https://github.com/dyerlab/talks/zipball/gh-pages" class="example">
+     Download
+    </a>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="nobackground" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Acknowledgements</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The following work has been made possible by the contributions of time and/or funds by the following individuals and groups.  Without their input, I would not be here.</p>
+
+<hr>
+
+<div style='float:left;width:48%;' class='centered'>
+  <h3>People</h3>
+
+<ul>
+<li>Victoria Sork (UCLA), Peter Smouse (Rutgers), John Nason (ISU)</li>
+<li>Ryan Garrick (Ole Miss), Andrew Eckert (VCU)</li>
+<li>Stephen Baker, Dan Carr, Angela Hutto, Crystal Meadows, Stephanie Burgess</li>
+<li>Owen, Janis &amp; Marlo</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <h3>Organizations</h3>
+
+<ul>
+<li>National Science Foundation (DEB-0543102 &amp; DEB-0640803)</li>
+<li>Virginia HTEF Research Fund (FY2008 &amp; FY2013)</li>
+<li>Virginia Commonwealth University 
+
+<ul>
+<li>Rice Center Research Grant (1342)</li>
+<li>Center for the Study of Biological Complexity</li>
+</ul></li>
+</ul>
+
+<script type = 'text/javascript'>
+$('p:has(img.build)').addClass('build')
+</script>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="nobackground" id="slide-2">
+<hgroup>
+  <h2>Path of the Talk</h2>
+</hgroup>
+<article class = 'flexbox vcenter'>
+<p><img src="assets/img/route.png" alt="route"></p>
+
+<!--- 
+#####################################################################
+#                     Networks in Biology
+#####################################################################
+-->
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+<slide class="center_title nobackground">
+  <aside class="gdbar right">
+    <img src="assets/img/Dyerlab.small.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <div class="blue">
+      <h1>Network Models</h1>
+      <h2>The Topology of Biological Interactions</h2>
+
+    </div>
+  </hgroup>
+</slide>
+<slide class="nobackground" id="slide-4" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><center><img src="./assets/img/darwin.png" alt="darwin"></center></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<blockquote>
+<p>The affinities of all beings of the same class have sometimes
+been represented by a great tree. I believe this simile 
+largely speaks the truth. 
+&nbsp;</p>
+</blockquote>
+
+<p style="text-align:right">C. Darwin<br/>On the Origin of Species<br/>1872 Edition</p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>1859 <i>Origin of Species</i> single illustration (copied from 1837 notebook)</p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="nobackground" id="slide-5">
+<hgroup>
+  <h2>Network Structure</h2>
+</hgroup>
+<article class = 'flexbox vcenter'>
+<p><img src="./assets/img/airplane_network.png" alt="network"></p>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-6" style="background:white;">
+  <hgroup>
+    <h2>Spatial Context</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>&nbsp;
+<center><img src="./assets/img/airplane_routes.png" alt="map"></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:white;">
+  <hgroup>
+    <h2>Networks in Ecological Thinking</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center><img src="./assets/img/network_ecology.png" alt="map"></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:white;">
+  <hgroup>
+    <h2>Networks in Evolutionary Thinking</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center><img src="./assets/img/network_popgen.png" alt="map"></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>Transition into Genetic variance</p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-9" style="background:white;">
+  <hgroup>
+    <h2>Shape Interest Redirects Focus</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <h3>Parameter Estimation</h3>
+
+<p><img src="figure/unnamed-chunk-2.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <h3>Topological Analysis</h3>
+
+<p><img src="figure/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3"> </p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>This is where we go from &quot;If&quot; to &quot;How&quot;</p>
+
+<!--- 
+#####################################################################
+#                     Genetic Networks
+#####################################################################
+-->
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="center_title nobackground">
+  <aside class="gdbar right">
+    <img src="assets/img/Dyerlab.small.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <div class="yellow">
+      <h1>Genetic Networks</h1>
+      <h2>I do not think it means what you think it means.</h2>
+
+    </div>
+  </hgroup>
+</slide>
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Adaptive &amp; Neutral Variance</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>In general, a genome is comprised of two general kinds of sequences:</p>
+
+<ol class = "build incremental">
+<li><b>Adaptive Variance:</b> The Part that Actually <strong>Does Something</strong>
+
+<ul>
+<li>Protein coding</li>
+<li>Regulatory &amp; promoter regions</li>
+<li>xxxRNA
+<p>&nbsp;</p></li>
+</ul></li>
+<li><b>Neutral Variance:</b> The <strong>Rest</strong>  <font color="#dddddd">(aka brother-in-law)</font>
+
+<ul>
+<li>repeaty regions</li>
+<li>introns</li>
+<li>spacers and jumpy bits</li>
+</ul></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <ol>
+<li>Mostly what people think of when discussiong DNA</li>
+<li>Rule out the non-coding stuff that is right next to the stuff under selection.</li>
+</ol>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Geometry of Variance</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Mulitlocus genetic variance can be defined in a geometric context for both within and between stratum components.</p>
+
+<p>&nbsp;</p>
+
+<p><span class="footnote">Dyer &amp; Nason. (2004)  <i>Molecular Ecology</i>, <b>13</b>, 1713-1728.</span></p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><img src="./assets/img/hypervolume.png" alt="hypervol"></p>
+
+<p>\(\sigma^2_W = \sum_{i=1}^K \sigma_{W,i}^2\)</p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <h3>Within population genetic variance</h3>
+
+<ul>
+<li>Multivariate </li>
+<li>Unique coordinate in HD space</li>
+<li>Volume</li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="nobackground" id="slide-13">
+<hgroup>
+  
+</hgroup>
+<article class = 'flexbox vcenter'>
+<p><img src="./assets/img/hypervolume2.png" alt="hypervols2"></p>
+
+<p>\(\sigma_A^2 = \sum_{i \ne j} \sigma_{A,i \leftrightarrow j}^2\)</p>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+<slide class="nobackground" id="slide-14" style="background:black;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    <p><center><img src="./assets/img/baja1.png" alt="baja"></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:white;">
+  <hgroup>
+    <h2>Pairwise Incompetence</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Few useable inferences about underlying demographic model gained from <em>pair-wise</em> approaches.</p>
+
+<p>&nbsp;</p>
+
+<p><span class="footnote">Dyer (2007) <i>Theoretical Population Biology</i>, <b>71</b>, 71-79<br/> Dyer <i>et al.</i> (2010) <i>Molecular Ecology</i>, <b>19</b>, 3746-3759.</span></p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><img src="figure/unnamed-chunk-4.png" alt="plot of chunk unnamed-chunk-4"> </p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="figure/unnamed-chunk-5.png" alt="plot of chunk unnamed-chunk-5"> </p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16">
+<hgroup>
+  <h2>Conditional Covariance</h2>
+</hgroup>
+<article class = 'flexbox vcenter'>
+<p><img src="./assets/img/condcov.png" alt="condcov"></p>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+<slide class="" id="myslide" style="background:white;">
+  <hgroup>
+    <h2>Shape of Genetic Covariance</h2>
+  </hgroup>
+  <article data-timings="">
+    <script>
+$('#myslide').on('slideenter', function(){
+  $(this).find('article')
+    .append('<center><iframe src="./assets/scripts/exampleTopology.html"></iframe></center>')
+});
+$('#myslide').on('slideleave', function(){
+  $(this).find('iframe').remove();
+});
+</script>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>Reemphasize the importance of focusing on topological shape over a single parameter.</p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="lopho" style="background:white;">
+  <hgroup>
+    <h2><a href="https://mapsengine.google.com/map/edit?mid=zbvgio1r3QDo.kkAl-A1evX6A">Shape</a> of Genetic Covariance</h2>
+  </hgroup>
+  <article data-timings="">
+    <script>
+$('#lopho').on('slideenter', function(){
+  $(this).find('article')
+    .append('<center><iframe src="./assets/scripts/lopho.html"></iframe></center>')
+});
+$('#lopho').on('slideleave', function(){
+  $(this).find('iframe').remove();
+});
+</script>
+
+<!--- 
+#####################################################################
+#                     Neutral Example
+#####################################################################
+-->
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="center_title nobackground">
+  <aside class="gdbar right">
+    <img src="assets/img/Dyerlab.small.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <div class="red">
+      <h1>Neutral Genetic Structure</h1>
+      <h2>The part that doesn&#39;t do anything</h2>
+
+    </div>
+  </hgroup>
+</slide>
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>Neutral Genetic Structure: What is it?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Neutral genetic strucuture is maintained by processes <em>other than selection</em>.  </p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <h3>Panmitic Gene Flow</h3>
+
+<p><img src="figure/unnamed-chunk-6.png" alt="plot of chunk unnamed-chunk-6"> </p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <h3>Stepping Stone-like Gene Flow</h3>
+
+<p><img src="figure/unnamed-chunk-7.png" alt="plot of chunk unnamed-chunk-7"> </p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Real-time Gene Flow</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>&nbsp;</p>
+
+<p><span class="footnote">Smouse <i>et al.</i> (2001). <i>Evolution</i>, <b>55</b>, 260-271.<br/>Dyer <i>et al.</i> (2004) <i>Heredity</i>, <b>92</b>, 204-211.</span></p>
+
+<p><img src="./assets/img/pollen_gf.png" alt="pollen"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>LIT Genetic structure in network, what about env?</p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-22" style="background:white;">
+  <hgroup>
+    <h2>Ecological Resistance</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <h3>Shortest Path Distance</h3>
+
+<p><center><img src="./assets/img/shortest_path.png" alt="sp"></center></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <h3>Circuit Distance</h3>
+
+<p><center><img src="./assets/img/circuit_paths.png" alt="circuit"></center></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <p>SP: Ecological surface, Not symmetric, may not optimize
+RL: All paths, network flow, many routes</p>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-23" style="background:white;">
+  <hgroup>
+    <h2><i>Cornus florida</i> L.</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p>&nbsp;</p>
+
+<ul>
+<li>Endemic understory tree
+&nbsp;</li>
+<li>Insect pollinated
+&nbsp;</li>
+<li>Animal dispersed seeds
+&nbsp;</li>
+<li>Early season phenology</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><center><img src="./assets/img/dogwood.png" alt="dogwood"></center></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:white;">
+  <hgroup>
+    <h2>Study Site</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center><img src="./assets/img/study_location.png" alt="site"></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:white;">
+  <hgroup>
+    <h2>Pollen Connectivity</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center><img src="./assets/img/pollen_graphs.png" alt="pollen_graphs"></center></p>
+
+<p><span class="footnote">Dyer <i>et al.</i> (2013) <i>Landscape Ecology</i>, <b>27</b>, 239-251</span></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-26" style="background:white;">
+  <hgroup>
+    <h2>Landscape Features Influencing Connectivity</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>&nbsp;</p>
+
+<p><span class="footnote">Dyer <i>et al.</i> (2013) <i>Landscape Ecology</i>, <b>27</b>, 239-251</span></p>
+
+<p><center><img src="./assets/img/avoidance.png" alt="avoidanceModel"></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-27" style="background:white;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    <p><center>
+<img src="./assets/img/neighborhood_area.png" alt="neighborhood">
+</center></p>
+
+<!--- 
+#####################################################################
+#                     Adaptive Example
+#####################################################################
+-->
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="center_title nobackground">
+  <aside class="gdbar right">
+    <img src="assets/img/Dyerlab.small.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <div class="green">
+      <h1>Adaptive Genetic Structure</h1>
+      <h2>The part most people think of</h2>
+
+    </div>
+  </hgroup>
+</slide>
+<slide class="nobrackground" id="slide-29" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    <p><img src="./assets/img/outliers.png" alt="outliers"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <ol>
+<li>Luikart et al. 2003</li>
+<li>Fst outliers (AFLP &amp; SNP), Heterozygosity (sweeps), Linkage</li>
+</ol>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-30" style="background:white;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    <p><img src="./assets/img/coop.png" alt="paper"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-31" style="background:;">
+  <hgroup>
+    <h2>Selection &amp; Genetic Covariance</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The shape of genetic covariance among human populations defined by the CEPH SNP dataset.</p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <h3>Neutral Variance</h3>
+
+<p><img src="figure/unnamed-chunk-8.png" alt="plot of chunk unnamed-chunk-8"> </p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <h3>LCT (Chr2)</h3>
+
+<p><img src="figure/unnamed-chunk-9.png" alt="plot of chunk unnamed-chunk-9"> </p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-32">
+<hgroup>
+  <h2>Leveraging A Covariance Approach</h2>
+</hgroup>
+<article class = 'flexbox vcenter'>
+<p><img src="./assets/img/walking_concept.png" alt="concept"></p>
+
+<ol class = "build incremental">
+<li>Topological change to <strong>deviation</strong> from neutral</li>
+<li><strong>Not</strong> all outliers are the same</li>
+<li><strong>Hypothesis</strong> typologies</li>
+</ol>
+
+</article>
+<!-- Presenter Notes -->
+<aside class="note">
+  <section>
+    <ol>
+<li>It is the pattern of covariance that changes not the magnitude of differentiation.
+
+<ul>
+<li>potential to reveal additional regions of interest</li>
+</ul></li>
+<li>Grouping outliers</li>
+<li>Scanning based upon external data</li>
+<li>MUST HAVE EXPECTATIONS FOR WHAT IS ODD</li>
+</ol>
+
+  </section>
+</aside>
+</slide>
+<slide class="" id="slide-33" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th>Feature</th>
+<th>Trt Means</th>
+<th>P(neu=neg)</th>
+<th>P(neu=pos)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Degree</td>
+<td>Pos &lt; Neu &lt; Neg</td>
+<td>\(0.84\)</td>
+<td><strong>\(8.68e^{-13}\)</strong></td>
+</tr>
+<tr>
+<td>Node Btwn</td>
+<td>Neu &lt; Neg &lt; Pos</td>
+<td>\(0.62\)</td>
+<td><strong>\(2.09e-4\)</strong></td>
+</tr>
+<tr>
+<td>Closeness</td>
+<td>Pos &lt; Neg &lt; Neu</td>
+<td><strong>\(1.25e^{-7}\)</strong></td>
+<td><strong>\(5.20e-12\)</strong></td>
+</tr>
+<tr>
+<td>cGD</td>
+<td>Neu &lt; Neg &lt; Pos</td>
+<td><strong>\(1.45e^{-3}\)</strong></td>
+<td><strong>\(<2.0e-16\)</strong></td>
+</tr>
+<tr>
+<td>Edge Btwn</td>
+<td>Neu &lt; Neg &lt; Pos</td>
+<td>\(0.49\)</td>
+<td><strong>\(5.77e-9\)</strong></td>
+</tr>
+<tr>
+<td>SlopeDegree</td>
+<td>Pos &lt; Neu &lt; Neg</td>
+<td>\(0.78\)</td>
+<td>\(0.88\)</td>
+</tr>
+<tr>
+<td>Diameter</td>
+<td>Neu &lt; Neg &lt; Pos</td>
+<td>\(0.24\)</td>
+<td><strong>\(2.06e-9\)</strong></td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-34" style="background:;">
+  <hgroup>
+    <h2>Outliers on Chromosome 2</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Simultaneous outliers for all topologically informative parameters.</p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><center><img src="./assets/img/feature_outliers.png" alt="feature outliers"></center></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p>&nbsp;</p>
+
+<h3>Identified outliers.</h3>
+
+<ul>
+<li><p>17 topologies
+&nbsp;</p></li>
+<li><p>All previously identified <a href="https://docs.google.com/document/d/1rBx09khUDTW7dMEpjS1O_p7j44j5mSrrUW8fOTIfPk4/edit?usp=sharing">gdoc</a>
+&nbsp;</p></li>
+<li><p>Not all the same!</p></li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-35" style="background:;">
+  <hgroup>
+    <h2>Putatively Adaptive Buckets: LCT</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>\(H_O\) Among outliers, what topologies are similar?</p>
+
+<p>&nbsp;</p>
+
+<p><center><img src="./assets/img/Similarity0.001percent_LCT.png" alt="LCT similarity"></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-36" style="background:white;">
+  <hgroup>
+    <h2>Putatively Adaptive Buckets: LCT</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>&nbsp;</p>
+
+<p><center><img src="./assets/img/adaptive_bucket.png" alt="LCT similarity"></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-37" style="background:;">
+  <hgroup>
+    <h2>Ecologically Motivated Hypothesis Matrix</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>&nbsp;</p>
+
+<p>What elements of genome covary in a way similar to an ecological variable?</p>
+
+<p>&nbsp;</p>
+
+<p><center><img src="./assets/img/human.maxtmp.png" alt="humanpops"></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-38" style="background:;">
+  <hgroup>
+    <h2>Ecologically Motivated Hypothesis Matrix</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center><img src="./assets/img/human.maxtmp.outliers.png" alt="human.outlier"></center></p>
+
+<p>Distance Congruence between maximum local <em>Temperature</em> and inter-population <em>genetic covariance</em> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="genomeBrowser1079" style="background:white;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    <script>
+$('#genomeBrowser1079').on('slideenter', function(){
+  $(this).find('article')
+    .append('<iframe src="http://tinyurl.com/c7go5d2"></iframe>')
+});
+$('#genomeBrowser1079').on('slideleave', function(){
+  $(this).find('iframe').remove();
+});
+</script>
+
+  </article>
+  <!-- Presenter Notes -->
+  <aside class="note" id="">
+    <section>
+      <ul>
+<li><em>EPB41L5:</em> Mammalian cell polarity (PMID: 17920587)</li>
+<li><em>PTPN4:</em> T Cell development &amp; Function (PMID: 18614237)</li>
+<li><em>PCDP1:</em> Flagellar biogenesis (PMID: 18039845) sinusitis male infertility hydrocephalus citus inversus</li>
+</ul>
+
+    </section>
+  </aside>
+</slide>
+
+<slide class="" id="slide-40" style="background:;">
+  <hgroup>
+    <h2>Utility of Shape-based Approaches</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Focusing on the topology of covariance provides complementary insights.</p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <h3>Neutral Variance</h3>
+
+<ol>
+<li><p>\(H_O:If\) &nbsp;&nbsp; \(\to\) &nbsp;&nbsp; \(H_O:How\).</p></li>
+<li><p>Magnitude of structure less relevant.</p></li>
+<li><p>Spatial congruence.</p></li>
+</ol>
+
+</div>
+<div style='float:right;width:48%;'>
+  <h3>\(\;\) &nbsp; &nbsp; \(\;\) &nbsp; &nbsp; Adaptive Variance</h3>
+
+<ol>
+<li><p>Reduce Type II Error</p></li>
+<li><p>Negative selection?</p></li>
+<li><p>Internal clustering</p></li>
+<li><p>External hypothese</p></li>
+</ol>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="nobackground" id="slide-41" style="background:black;">
+  <hgroup>
+    
+  </hgroup>
+  <article data-timings="">
+    <p><center><img src="./assets/img/last.png" alt="last"></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Acknowledgements'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Path of the Talk'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Network Models'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title=''>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Network Structure'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Spatial Context'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Networks in Ecological Thinking'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Networks in Evolutionary Thinking'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Shape Interest Redirects Focus'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Genetic Networks'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Adaptive &amp; Neutral Variance'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Geometry of Variance'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title=''>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title=''>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Pairwise Incompetence'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Conditional Covariance'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Shape of Genetic Covariance'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='<a href="https://mapsengine.google.com/map/edit?mid=zbvgio1r3QDo.kkAl-A1evX6A">Shape</a> of Genetic Covariance'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Neutral Genetic Structure'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='Neutral Genetic Structure: What is it?'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='Real-time Gene Flow'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='Ecological Resistance'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='<i>Cornus florida</i> L.'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Study Site'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='Pollen Connectivity'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='Landscape Features Influencing Connectivity'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title=''>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='Adaptive Genetic Structure'>
+         28
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title=''>
+         29
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title=''>
+         30
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=31 title='Selection &amp; Genetic Covariance'>
+         31
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=32 title='Leveraging A Covariance Approach'>
+         32
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=33 title=''>
+         33
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=34 title='Outliers on Chromosome 2'>
+         34
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=35 title='Putatively Adaptive Buckets: LCT'>
+         35
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=36 title='Putatively Adaptive Buckets: LCT'>
+         36
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=37 title='Ecologically Motivated Hypothesis Matrix'>
+         37
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=38 title='Ecologically Motivated Hypothesis Matrix'>
+         38
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=39 title=''>
+         39
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=40 title='Utility of Shape-based Approaches'>
+         40
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=41 title=''>
+         41
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+<!-- Load Javascripts for Widgets -->
+<!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+</html>
