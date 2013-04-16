@@ -3,3 +3,10 @@
 
 # Example code in package build process
 *-Ex.R
+.Rproj.user
+unnamed-chunk*
+.cache/
+payload.RData
+index.html
+index.md
+isu_2013/figure/*.png
