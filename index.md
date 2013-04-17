@@ -414,6 +414,31 @@ LIT Genetic structure in network, what about env?
 
 
 
+
+
+
+---  bg:white
+
+## Pollen Connectivity
+
+<center>![pollen_graphs](./assets/img/pollen_graphs.png)</center>
+
+<span class="footnote">Dyer <i>et al.</i> (2013) <i>Landscape Ecology</i>, <b>27</b>, 239-251</span>
+
+--- bg:white
+
+## Landscape Features Influencing Connectivity
+
+&nbsp;
+
+<span class="footnote">Dyer <i>et al.</i> (2013) <i>Landscape Ecology</i>, <b>27</b>, 239-251</span>
+
+<center>![avoidanceModel](./assets/img/avoidance.png)</center>
+
+
+
+
+
 --- &twocol
 
 ## Quantification of Disperal Environment
@@ -433,8 +458,6 @@ LIT Genetic structure in network, what about env?
 - Shrubbery
 - Stem density
 - Roads & main paths
-
-
 
 
 
@@ -461,24 +484,6 @@ SP: Ecological surface, Not symmetric, may not optimize
 RL: All paths, network flow, many routes
 
 
-
----  bg:white
-
-## Pollen Connectivity
-
-<center>![pollen_graphs](./assets/img/pollen_graphs.png)</center>
-
-<span class="footnote">Dyer <i>et al.</i> (2013) <i>Landscape Ecology</i>, <b>27</b>, 239-251</span>
-
---- bg:white
-
-## Landscape Features Influencing Connectivity
-
-&nbsp;
-
-<span class="footnote">Dyer <i>et al.</i> (2013) <i>Landscape Ecology</i>, <b>27</b>, 239-251</span>
-
-<center>![avoidanceModel](./assets/img/avoidance.png)</center>
 
 
 --- bg:white
