@@ -419,6 +419,27 @@ plot( g.ss, vertex.color=V(g.ss)$color, vertex.size=15)
 LIT Genetic structure in network, what about env?
 
 
+
+
+--- bg:#797979
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+<p class="hypothesis">Can the <em>shape</em> of pollen pool variation <br/>
+provide inferences into which <b>landscape features</b><br/> 
+influencing real-time <i>gene flow</i>?</p>
+
+
+
+
+
+
+
+
 --- &twocol bg:white
 
 ## Ecological Resistance
@@ -572,6 +593,22 @@ plot( human.random.graph , layout=layout, vertex.label.color="#4387fd")
 load("./data/human.lac.graph.rda")
 plot(human.lac.graph, layout=layout , vertex.label.color="#4387fd")
 ```
+
+
+
+
+--- bg:#797979
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+<p class="hypothesis">Can the shape of <em>among-population</em> variation <br/>
+measured <b>along</b> the chromosome <br/>
+provide inferences into <i>partitioning</i><br/> 
+and categorization of genetic variance?</p>
 
 
 

@@ -374,6 +374,27 @@ Neutral genetic strucuture is maintained by processes _other than selection_.
 LIT Genetic structure in network, what about env?
 
 
+
+
+--- bg:#797979
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+<p class="hypothesis">Can the <em>shape</em> of pollen pool variation <br/>
+provide inferences into which <b>landscape features</b><br/> 
+influencing real-time <i>gene flow</i>?</p>
+
+
+
+
+
+
+
+
 --- &twocol bg:white
 
 ## Ecological Resistance
@@ -522,6 +543,22 @@ The shape of genetic covariance among human populations defined by the CEPH SNP 
 
 ![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9.png) 
 
+
+
+
+
+--- bg:#797979
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+<p class="hypothesis">Can the shape of <em>among-population</em> variation <br/>
+measured <b>along</b> the chromosome <br/>
+provide inferences into <i>partitioning</i><br/> 
+and categorization of genetic variance?</p>
 
 
 
