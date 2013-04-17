@@ -50,6 +50,11 @@ $('p:has(img.build)').addClass('build')
 </script>
 
 
+--- bg:black
+
+<center>![geneflow](./assets/img/geneflow.png)</center>
+
+
 --- &vcenter .nobackground
 
 ## Path of the Talk
@@ -294,6 +299,7 @@ $('#myslide').on('slideleave', function(){
 });
 </script>
 
+<span class="footnote">Dyer (2007) <i>Theoretical Population Biology</i>, <b>71</b>, 71-79.</span>
 
 
 *** =pnotes
@@ -335,28 +341,6 @@ $('#lopho').on('slideleave', function(){
 
 
 
---- &twocol
-
-## Neutral Genetic Structure: What is it?
-
-Neutral genetic strucuture is maintained by processes _other than selection_.  
-
-
-*** =left 
-
-### Panmitic Gene Flow
-
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
-
-
-
-*** =right
-
-### Stepping Stone-like Gene Flow
-
-![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7.png) 
-
-
 
 
 ---
@@ -368,11 +352,6 @@ Neutral genetic strucuture is maintained by processes _other than selection_.
 <span class="footnote">Smouse <i>et al.</i> (2001). <i>Evolution</i>, <b>55</b>, 260-271.<br/>Dyer <i>et al.</i> (2004) <i>Heredity</i>, <b>92</b>, 204-211.</span>
 
 ![pollen](./assets/img/pollen_gf.png)
-
-*** =pnotes
-
-LIT Genetic structure in network, what about env?
-
 
 
 
@@ -392,12 +371,76 @@ influencing real-time <i>gene flow</i>?</p>
 
 
 
+*** =pnotes
+
+LIT Genetic structure in network, what about env?
+
+
+
+--- bg:white
+
+## Study Site
+
+<center>![site](./assets/img/study_location.png)</center>
 
 
 
 --- &twocol bg:white
 
-## Ecological Resistance
+## <i>Cornus florida</i> L.
+
+
+*** =left
+
+&nbsp;
+- Endemic understory tree
+&nbsp;
+- Insect pollinated
+&nbsp;
+- Animal dispersed seeds
+&nbsp;
+- Early season phenology
+&nbsp;
+- Spatial Autocorrelation to 23m
+&nbsp;
+- Pollen pool differentiation: $\Phi_{FT} = 0.12$
+
+
+
+*** =right
+
+<center>![dogwood](./assets/img/dogwood.png)</center>
+
+
+
+
+--- &twocol
+
+## Quantification of Disperal Environment
+
+<center>![hyperspec](./assets/img/hyperspec.png)</center>
+
+*** =left
+
+- Open Canopy
+- Pine Canopy
+- Oak Canopy
+- Decid. Canopy
+
+*** =right
+
+- Dogwood Canopy
+- Shrubbery
+- Stem density
+- Roads & main paths
+
+
+
+
+
+--- &twocol bg:white
+
+## Ecological Resistance For Dispersal
 
 *** =left
 
@@ -416,37 +459,6 @@ influencing real-time <i>gene flow</i>?</p>
 
 SP: Ecological surface, Not symmetric, may not optimize
 RL: All paths, network flow, many routes
-
-
---- &twocol bg:white
-
-## <i>Cornus florida</i> L.
-
-
-*** =left
-
-&nbsp;
-- Endemic understory tree
-&nbsp;
-- Insect pollinated
-&nbsp;
-- Animal dispersed seeds
-&nbsp;
-- Early season phenology
-
-*** =right
-
-<center>![dogwood](./assets/img/dogwood.png)</center>
-
-
---- bg:white
-
-## Study Site
-
-<center>![site](./assets/img/study_location.png)</center>
-
-
-
 
 
 
@@ -506,7 +518,7 @@ RL: All paths, network flow, many routes
 
 
 
---- .nobrackground 
+--- bg:white
 ![outliers](./assets/img/outliers.png)
 
 
@@ -531,7 +543,7 @@ The shape of genetic covariance among human populations defined by the CEPH SNP 
 
 ### Neutral Variance
 
-![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8.png) 
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
 
 
 
@@ -541,7 +553,7 @@ The shape of genetic covariance among human populations defined by the CEPH SNP 
 
 ### LCT (Chr2)
 
-![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9.png) 
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7.png) 
 
 
 
