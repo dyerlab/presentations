@@ -158,7 +158,7 @@ W & KW foundation for popgen
 
 ### Parameter Estimation
 
-![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2.png) 
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
 
 
 
@@ -166,7 +166,7 @@ W & KW foundation for popgen
 
 ### Topological Analysis
 
-![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
 
 
 
@@ -277,13 +277,13 @@ Few useable inferences about underlying demographic model gained from _pair-wise
 
 *** =left
 
-![plot of chunk unnamed-chunk-4](assets/fig/unnamed-chunk-4.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
 
 
 
 *** =right
 
-![plot of chunk unnamed-chunk-5](assets/fig/unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
 
 
 
@@ -602,7 +602,7 @@ The shape of genetic covariance among human populations defined by the CEPH SNP 
 
 ### Neutral Variance
 
-![plot of chunk unnamed-chunk-6](assets/fig/unnamed-chunk-6.png) 
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
 
 
 
@@ -612,7 +612,7 @@ The shape of genetic covariance among human populations defined by the CEPH SNP 
 
 ### LCT (Chr2)
 
-![plot of chunk unnamed-chunk-7](assets/fig/unnamed-chunk-7.png) 
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7.png) 
 
 
 *** =pnotes
@@ -681,7 +681,9 @@ Diameter    | Neu < Neg < Pos | $0.24$           | __$2.06e-9$__
 
 
 *** =pnotes
-
+- Neg vs Pos  
+- Go through each measure (node vs. edge)
+- Relative ordering 
 
 
 
@@ -759,6 +761,13 @@ What elements of genome covary in a way similar to an ecological variable?
 <center>![human.outlier](./assets/img/human.maxtmp.outliers.png)</center>
 
 Distance Congruence between maximum local _Temperature_ and inter-population _genetic covariance_ 
+
+
+*** =pnotes
+- example, starting location for future 
+- way in which covaraicne is distributed is congruent with differentiation
+- delta (sm=sm or lg=lg)
+
 
 
 --- #genomeBrowser1079 bg:white

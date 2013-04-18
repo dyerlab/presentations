@@ -720,7 +720,9 @@ Diameter    | Neu < Neg < Pos | $0.24$           | __$2.06e-9$__
 
 
 *** =pnotes
-
+- Neg vs Pos  
+- Go through each measure (node vs. edge)
+- Relative ordering 
 
 
 
@@ -798,6 +800,13 @@ What elements of genome covary in a way similar to an ecological variable?
 <center>![human.outlier](./assets/img/human.maxtmp.outliers.png)</center>
 
 Distance Congruence between maximum local _Temperature_ and inter-population _genetic covariance_ 
+
+
+*** =pnotes
+- example, starting location for future 
+- way in which covaraicne is distributed is congruent with differentiation
+- delta (sm=sm or lg=lg)
+
 
 
 --- #genomeBrowser1079 bg:white
