@@ -54,6 +54,9 @@ $('p:has(img.build)').addClass('build')
 
 <center>![geneflow](./assets/img/geneflow.png)</center>
 
+*** =pnotes
+- 10 yrs ago
+- apporach adopted for yielding biologicial inferences rather than specifics
 
 --- &vcenter .nobackground
 
@@ -109,6 +112,11 @@ $('p:has(img.build)').addClass('build')
 
 ![network](./assets/img/airplane_network.png)
 
+*** =pnotes
+
+Pattern of connectivity "shape"
+Dictates the underlying functionality
+"Decorate" it with additional data to add relevance
 
 ---  bg:white
 
@@ -117,6 +125,8 @@ $('p:has(img.build)').addClass('build')
 &nbsp;
 <center>![map](./assets/img/airplane_routes.png)</center>
 
+*** =pnotes
+Adding spatial context & edge frequency contrast provides additional, and meaningful inferences as to the function (or disfunction) 
 
 ---  bg:white
 
@@ -136,7 +146,8 @@ Transition into Genetic variance
 
 
 
-
+*** =pnotes
+W & KW foundation for popgen
 
 
 --- &twocol bg:white
@@ -147,7 +158,7 @@ Transition into Genetic variance
 
 ### Parameter Estimation
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
+![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2.png) 
 
 
 
@@ -155,12 +166,13 @@ Transition into Genetic variance
 
 ### Topological Analysis
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
+![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3.png) 
 
 
 
 *** =pnotes 
 
+"pure math" v "statistics"
 This is where we go from "If" to "How"
 
 
@@ -198,6 +210,8 @@ In general, a genome is comprised of two general kinds of sequences:
 
 1. Mostly what people think of when discussiong DNA
 2. Rule out the non-coding stuff that is right next to the stuff under selection.
+3. N = where phylogeograph and historical demography is recorded
+4. Interconnected beyond just linkage (see later)
 
 
 
@@ -247,7 +261,8 @@ $\sigma_A^2 = \sum_{i \ne j} \sigma_{A,i \leftrightarrow j}^2$
 
 <center>![baja](./assets/img/baja1.png)</center>
 
-
+*** =pnotes
+- just out of Boone
 
 
 --- &twocol w1:60% w2:40% bg:white
@@ -262,16 +277,20 @@ Few useable inferences about underlying demographic model gained from _pair-wise
 
 *** =left
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
+![plot of chunk unnamed-chunk-4](assets/fig/unnamed-chunk-4.png) 
 
 
 
 *** =right
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-5](assets/fig/unnamed-chunk-5.png) 
 
 
 
+
+*** =pnotes
+- pairwise approach covers but interest is
+- recovers the underlying demographic model
 
 
 --- &vcenter
@@ -282,7 +301,8 @@ Few useable inferences about underlying demographic model gained from _pair-wise
 
 
 
-
+*** =pnotes
+- like Type III SS or Marginal Probability
 
 
 --- #myslide bg:white
@@ -323,6 +343,10 @@ $('#lopho').on('slideleave', function(){
 
 
 
+*** =pnotes
+- decorating with spatial and additional information
+
+
 
 
 
@@ -352,6 +376,12 @@ $('#lopho').on('slideleave', function(){
 <span class="footnote">Smouse <i>et al.</i> (2001). <i>Evolution</i>, <b>55</b>, 260-271.<br/>Dyer <i>et al.</i> (2004) <i>Heredity</i>, <b>92</b>, 204-211.</span>
 
 ![pollen](./assets/img/pollen_gf.png)
+
+
+*** =pnotes
+- pp is population
+- delta p = f(gf)
+- provides overall structure
 
 
 
@@ -384,10 +414,13 @@ LIT Genetic structure in network, what about env?
 <center>![site](./assets/img/study_location.png)</center>
 
 
+*** =pnotes
+- ~ 200 ha
+- 452 cf
 
 --- &twocol bg:white
 
-## <i>Cornus florida</i> L.
+## Flowering Dogwood, <i>Cornus florida</i> L.
 
 
 *** =left
@@ -425,6 +458,17 @@ LIT Genetic structure in network, what about env?
 
 <span class="footnote">Dyer <i>et al.</i> (2013) <i>Landscape Ecology</i>, <b>27</b>, 239-251</span>
 
+
+
+
+*** =pnotes
+- does not reproduce large seed crops every year
+- >700 offspring
+- 2 reproductive years
+- LIT where edges cross
+
+
+
 --- bg:white
 
 ## Landscape Features Influencing Connectivity
@@ -436,7 +480,8 @@ LIT Genetic structure in network, what about env?
 <center>![avoidanceModel](./assets/img/avoidance.png)</center>
 
 
-
+*** =pnotes
+- preference & avoidance
 
 
 --- &twocol
@@ -459,6 +504,9 @@ LIT Genetic structure in network, what about env?
 - Stem density
 - Roads & main paths
 
+*** =pnotes
+
+More specific on intervening habitat 
 
 
 --- &twocol bg:white
@@ -480,7 +528,7 @@ LIT Genetic structure in network, what about env?
 
 *** =pnotes
 
-SP: Ecological surface, Not symmetric, may not optimize
+SP: Ecological surface, Not symmetric, may not optimize  
 RL: All paths, network flow, many routes
 
 
@@ -494,7 +542,9 @@ RL: All paths, network flow, many routes
 
 
 
-
+*** =pnotes
+- Ecologically relevant neighborhood areas.
+- Gene flow from the perspective of the intervening landscape, not just euclidean distance
 
 
 
@@ -535,6 +585,10 @@ RL: All paths, network flow, many routes
 ---   bg:white
 ![paper](./assets/img/coop.png)
 
+*** =pnotes
+- Fixed differences accounted for by migraph  
+- Selection weakish
+- Pattern of variation even in adaptive regions has neutral content
 
 
 --- &twocol
@@ -548,7 +602,7 @@ The shape of genetic covariance among human populations defined by the CEPH SNP 
 
 ### Neutral Variance
 
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
+![plot of chunk unnamed-chunk-6](assets/fig/unnamed-chunk-6.png) 
 
 
 
@@ -558,9 +612,13 @@ The shape of genetic covariance among human populations defined by the CEPH SNP 
 
 ### LCT (Chr2)
 
-![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7.png) 
+![plot of chunk unnamed-chunk-7](assets/fig/unnamed-chunk-7.png) 
 
 
+*** =pnotes
+- Ch2  
+- Same location for nodes, edges different  
+- Signature of neutrality 
 
 
 
@@ -599,7 +657,8 @@ and categorization of genetic variance?</p>
   - potential to reveal additional regions of interest
 2. Grouping outliers
 3. Scanning based upon external data
-4. MUST HAVE EXPECTATIONS FOR WHAT IS ODD
+4. MUST HAVE EXPECTATIONS FOR WHAT IS ODD  
+- graph based
 
 
 
@@ -619,6 +678,12 @@ cGD         | Neu < Neg < Pos | __$1.45e^{-3}$__ | __$<2.0e-16$__
 Edge Btwn   | Neu < Neg < Pos | $0.49$           | __$5.77e-9$__
 SlopeDegree | Pos < Neu < Neg | $0.78$           | $0.88$ 
 Diameter    | Neu < Neg < Pos | $0.24$           | __$2.06e-9$__
+
+
+*** =pnotes
+
+
+
 
 
 --- &twocol w1:60% w2:40%
@@ -714,7 +779,7 @@ $('#genomeBrowser1079').on('slideleave', function(){
 - _EPB41L5:_ Mammalian cell polarity (PMID: 17920587)
 - _PTPN4:_ T Cell development & Function (PMID: 18614237)
 - _PCDP1:_ Flagellar biogenesis (PMID: 18039845) sinusitis male infertility hydrocephalus citus inversus
-
+- _THEM177:_ Transmembrane protein.
 
 
 

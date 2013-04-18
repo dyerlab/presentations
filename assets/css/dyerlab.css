@@ -27,7 +27,9 @@
   letter-spacing: 2px;
 }
 
-
+h2 i {
+  font-style: italic;
+}
 
 .hypothesis {
   color: #e6e6e6;
